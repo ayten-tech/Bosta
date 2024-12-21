@@ -10,11 +10,11 @@ struct ProfileView: View {
                     .font(.largeTitle)
                     .padding()
                 
-                // Display address if available
+                
                 Text(viewModel.user?.addressDescription ?? "Loading address...")
                     .font(.subheadline)
 
-                // List of albums
+                
                 List(viewModel.albums) { album in
                     NavigationLink(destination: AlbumView(album: album)) {
                         Text(album.title)
